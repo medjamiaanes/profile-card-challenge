@@ -17,6 +17,12 @@ $mobile: 375px;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+body,
+html {
+  width: 100%;
+  background-color: $darkCyan;
+}
+
 .page-wrapper {
   width: 100%;
   height: 100vh;
@@ -121,5 +127,32 @@ $mobile: 375px;
 @media all and (max-width: 768px) {
   .page-wrapper {
     background-position: 150% -50vh, -50% 50vh;
+    .profile-card {
+      width: 40%;
+      height: 80vh;
+      min-width: 280px;
+      max-height: 350px;
+      min-height: 250px;
+      .profile-card-header {
+        height: 35%;
+      }
+      .profile-card-footer {
+        height: 20%;
+      }
+      .profile-card-body {
+        height: 45%;
+      }
+    }
+  }
+}
+
+@media all and (max-height: 456px) {
+  .attribution {
+    display: none;
+  }
+  .page-wrapper {
+    .profile-card {
+      height: 95%;
+    }
   }
 }
